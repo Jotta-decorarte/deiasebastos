@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dias & Bastos — Advogados Trabalhistas | Análise Gratuita</title>
+<meta name="description" content="Está com problemas com a empresa? Análise 100% gratuita. Você só paga se ganhar. +5.000 casos resolvidos. Atendimento humanizado em todo o Brasil." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script>
+  const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accent": "#C9A86A",
+    "background": "#0A1330",
+    "heroVariant": "split",
+    "showStripe": true,
+    "showFloatingCta": true,
+    "whatsappNumber": "5521964517008"
+  }/*EDITMODE-END*/;
+</script>
+
+<style>
+  :root {
+    --bg: #0A1330;          /* brand navy */
+    --bg-2: #0F1A3D;
+    --bg-3: #182452;
+    --line: rgba(201, 168, 106, 0.28);
+    --line-soft: rgba(255,255,255,0.10);
+    --gold: #C9A86A;
+    --gold-2: #B8965A;
+    --gold-soft: rgba(201, 168, 106, 0.12);
+    --ink: #FFFFFF;
+    --ink-2: #D6DBEC;
+    --ink-3: #95A0C4;
+    --whats: #25D366;
+    --whats-2: #1FB955;
+    --serif: "Playfair Display", "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: #0A1330; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #0A1330;
+    background: var(--bg);
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 768px) { .wrap { padding: 0 22px; } }
+
+  .serif { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; }
+  .mono { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+  .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold);
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); display: inline-block; }
+
+  /* ───── Top stripe ───── */
+  .stripe {
+    background: #060B22;
+    border-bottom: 1px solid var(--line-soft);
+    color: var(--ink-2);
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+  }
+  .stripe-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 40px; max-width: 1280px; margin: 0 auto;
+    gap: 24px;
+  }
+  .stripe-inner span { display: inline-flex; align-items: center; gap: 8px; }
+  .stripe-inner .dot { width: 7px; height: 7px; background: var(--whats); border-radius: 99px; box-shadow: 0 0 0 4px rgba(37,211,102,0.18); animation: livePulse 2s ease-in-out infinite; }
+  @keyframes livePulse { 50% { box-shadow: 0 0 0 7px rgba(37,211,102,0.0); } }
+  .stripe a:hover { color: var(--gold); }
+  @media (max-width: 768px) { .stripe-mobile-hide { display: none; } .stripe-inner { padding: 10px 22px; } }
+
+  /* ───── Nav ───── */
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    background: rgba(10, 19, 48, 0.82);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 40px;
+    gap: 24px;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0;
+    height: 52px;
+  }
+  .nav-logo img { height: 100%; width: auto; }
+
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    font-size: 13px; color: var(--ink-2); letter-spacing: 0.04em;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  @media (max-width: 980px) { .nav-links { display:none; } }
+
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 11px 18px;
+    background: var(--whats); color: #06210F;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    border-radius: 999px;
+    transition: transform .2s, background .2s;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.25);
+  }
+  .nav-cta:hover { background: var(--whats-2); transform: translateY(-1px); }
+  @media (max-width: 540px) { .nav-cta .lbl { display: none; } .nav-cta { padding: 11px; } }
+
+  /* ───── Hero ───── */
+  .hero {
+    position: relative;
+    padding: 56px 0 96px;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 30%, rgba(201,168,106,0.14), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 10% 90%, rgba(201,168,106,0.06), transparent 70%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  }
+  .hero-bg { display: none; }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 50% at 60% 40%, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 60% 40%, black 30%, transparent 70%);
+    opacity: .4; z-index: 0; pointer-events: none;
+  }
+  .hero > .wrap { position: relative; z-index: 1; }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+    align-items: center;
+  }
+  @media (max-width: 1000px) { .hero-inner { grid-template-columns: 1fr; gap: 48px; } }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(36px, 4.8vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 22px 0 24px;
+    text-wrap: balance;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .hero h1 .underline {
+    position: relative; display: inline-block;
+  }
+  .hero h1 .underline::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 4px;
+    height: 1px; background: var(--gold); opacity: .55;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--ink-2);
+    max-width: 540px;
+    margin: 0 0 28px;
+    line-height: 1.55;
+  }
+  .hero-sub strong { color: var(--ink); font-weight: 600; }
+
+  .hero-bullets {
+    list-style: none; padding: 0; margin: 0 0 32px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .hero-bullets li {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 15.5px; color: var(--ink-2);
+  }
+  .hero-bullets .check {
+    width: 22px; height: 22px; flex-shrink: 0;
+    border: 1px solid var(--gold); border-radius: 999px;
+    display: grid; place-items: center;
+    color: var(--gold);
+    margin-top: 1px;
+    background: var(--gold-soft);
+  }
+
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 24px;
+    font-size: 15px; font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform .2s, background .2s, color .2s, box-shadow .2s;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .btn-whats {
+    background: var(--whats); color: #06210F;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.32), inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+  .btn-whats:hover { background: var(--whats-2); transform: translateY(-1px); }
+  .btn-ghost {
+    border-color: var(--gold); color: var(--gold); background: transparent;
+  }
+  .btn-ghost:hover { background: var(--gold); color: var(--bg-2); }
+  .btn-gold {
+    background: var(--gold); color: var(--bg-2);
+    box-shadow: 0 8px 24px rgba(201,168,106,0.32);
+  }
+  .btn-gold:hover { background: var(--gold-2); transform: translateY(-1px); }
+  .btn .arrow { transition: transform .2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+  .btn-block { width: 100%; justify-content: center; padding: 18px 24px; font-size: 16px; }
+
+  /* hero right: photo + form card */
+  .hero-card-wrap {
+    position: relative;
+  }
+  .hero-photo-frame {
+    position: relative;
+    aspect-ratio: 4/5;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  .hero-photo-frame::before {
+    content: ""; position: absolute; inset: 12px;
+    border: 1px solid rgba(201,168,106,0.25);
+    pointer-events: none; z-index: 2;
+  }
+  .hero-photo-frame img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+    filter: saturate(1.05);
+  }
+  .hero-photo-frame::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,19,48,0) 50%, rgba(10,19,48,0.92) 100%);
+    pointer-events: none;
+  }
+  .hero-photo-meta {
+    position: absolute; left: 28px; right: 28px; top: 28px;
+    display: flex; justify-content: space-between;
+    color: var(--gold);
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+    z-index: 3;
+    text-transform: uppercase;
+  }
+  .hero-photo-bottom {
+    position: absolute; left: 28px; right: 28px; bottom: 24px;
+    z-index: 3;
+  }
+  .hero-photo-bottom .nm {
+    font-family: var(--serif); font-size: 22px; line-height: 1.15;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .hero-photo-bottom .role {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em;
+    color: var(--gold); margin-top: 6px; text-transform: uppercase;
+  }
+  .hero-floating-stat {
+    position: absolute; right: -16px; top: 18%;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 18px 22px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    z-index: 4;
+  }
+  .hero-floating-stat .num {
+    font-family: var(--serif); font-size: 36px; line-height: 1; color: var(--gold);
+    letter-spacing: -0.02em;
+  }
+  .hero-floating-stat .lbl {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em;
+    color: var(--ink-3); margin-top: 6px; text-transform: uppercase;
+  }
+  @media (max-width: 1000px) {
+    .hero-floating-stat { right: 16px; top: 18px; }
+  }
+
+  /* hero ribbon */
+  .hero-ribbon {
+    margin-top: 56px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 22px 0;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+    text-align: left;
+  }
+  .hero-ribbon div { display: flex; flex-direction: column; gap: 4px; }
+  .hero-ribbon .num { font-family: var(--serif); font-size: 32px; color: var(--gold); line-height: 1; }
+  .hero-ribbon .lbl { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; }
+  @media (max-width: 720px) { .hero-ribbon { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+
+  /* ───── Section frame ───── */
+  section.block { padding: 110px 0; position: relative; }
+  section.block + section.block { border-top: 1px solid var(--line-soft); }
+
+  .sec-head {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: end; margin-bottom: 56px;
+  }
+  .sec-head h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 3.8vw, 52px);
+    line-height: 1.05; letter-spacing: -0.02em;
+    margin: 12px 0 0; text-wrap: balance;
+  }
+  .sec-head h2 em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .sec-head p { color: var(--ink-2); max-width: 480px; margin: 0; font-size: 16px; }
+  @media (max-width: 820px) { .sec-head { grid-template-columns: 1fr; gap: 24px; align-items: start; margin-bottom: 40px; } }
+
+  /* ───── Direitos ───── */
+  .direitos-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-soft);
+    border-left: 1px solid var(--line-soft);
+  }
+  .direito {
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 28px 26px 32px;
+    min-height: 200px;
+    position: relative;
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: background .25s;
+  }
+  .direito:hover { background: rgba(201,168,106,0.05); }
+  .direito:hover .direito-title { color: var(--gold); }
+  .direito .num {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; color: var(--gold);
+  }
+  .direito-title {
+    font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1.1;
+    margin-top: 48px; transition: color .2s;
+  }
+  .direito-desc {
+    margin-top: 10px; font-size: 13px; color: var(--ink-3); line-height: 1.5;
+  }
+  .direito .arrow-corner {
+    position: absolute; right: 22px; top: 22px;
+    color: var(--ink-3); opacity: .4; transition: opacity .2s, transform .2s, color .2s;
+  }
+  .direito:hover .arrow-corner { opacity: 1; color: var(--gold); transform: translate(2px,-2px); }
+  @media (max-width: 980px) { .direitos-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .direitos-grid { grid-template-columns: 1fr; } }
+
+  /* ───── Urgência ───── */
+  .urgencia {
+    background:
+      radial-gradient(ellipse 50% 70% at 80% 50%, rgba(201,168,106,0.12), transparent 60%),
+      var(--bg-2);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .urgencia-inner {
+    display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center;
+  }
+  @media (max-width: 920px) { .urgencia-inner { grid-template-columns: 1fr; gap: 48px; } }
+
+  .clock {
+    position: relative; aspect-ratio: 1/1; max-width: 360px;
+    border: 1px solid var(--line);
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, rgba(201,168,106,0.06), transparent);
+  }
+  .clock::before {
+    content: ""; position: absolute; inset: 22px;
+    border: 1px solid rgba(201,168,106,0.18); border-radius: 999px;
+  }
+  .clock::after {
+    content: ""; position: absolute; inset: 56px;
+    border: 1px dashed rgba(201,168,106,0.34); border-radius: 999px;
+    animation: spin 60s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .clock-content {
+    text-align: center; z-index: 2;
+  }
+  .clock-content .big {
+    font-family: var(--serif); font-size: 88px; line-height: 1; color: var(--gold);
+    letter-spacing: -0.04em;
+  }
+  .clock-content .big span { color: var(--ink-3); font-size: 52px; }
+  .clock-content .lbl {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-3);
+    text-transform: uppercase; margin-top: 10px;
+  }
+  .urgencia h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(32px, 4.2vw, 56px);
+    line-height: 1.05; letter-spacing: -0.02em; margin: 16px 0 22px;
+  }
+  .urgencia p {
+    font-size: 17px; color: var(--ink-2); line-height: 1.6; max-width: 520px;
+    margin-bottom: 12px;
+  }
+  .urgencia .accent { color: var(--gold); font-style: italic; font-family: var(--serif); }
+
+  /* ───── Autoridade ───── */
+  .auth-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border: 1px solid var(--line-soft);
+  }
+  .auth-cell {
+    padding: 32px 28px;
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    display: flex; flex-direction: column; gap: 12px;
+    min-height: 190px;
+  }
+  .auth-cell:nth-child(3n) { border-right: 0; }
+  .auth-cell:nth-last-child(-n+3) { border-bottom: 0; }
+  .auth-cell .num {
+    font-family: var(--serif); font-size: 52px; line-height: 1; color: var(--gold);
+    letter-spacing: -0.03em;
+  }
+  .auth-cell .num sup { font-size: 22px; vertical-align: super; }
+  .auth-cell .title { font-family: var(--serif); font-size: 21px; }
+  .auth-cell .desc { color: var(--ink-3); font-size: 13.5px; line-height: 1.55; }
+  @media (max-width: 920px) {
+    .auth-grid { grid-template-columns: repeat(2, 1fr); }
+    .auth-cell:nth-child(3n) { border-right: 1px solid var(--line-soft); }
+    .auth-cell:nth-child(2n) { border-right: 0; }
+    .auth-cell:nth-last-child(-n+3) { border-bottom: 1px solid var(--line-soft); }
+    .auth-cell:nth-last-child(-n+2) { border-bottom: 0; }
+  }
+  @media (max-width: 560px) {
+    .auth-grid { grid-template-columns: 1fr; }
+    .auth-cell { border-right: 0 !important; border-bottom: 1px solid var(--line-soft) !important; }
+    .auth-cell:last-child { border-bottom: 0 !important; }
+  }
+
+  /* ───── Advogados ───── */
+  .adv-section { background: linear-gradient(180deg, transparent, rgba(15,26,61,0.4)); }
+  .adv-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  @media (max-width: 820px) { .adv-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+  .adv-card {
+    border: 1px solid var(--line-soft);
+    overflow: hidden;
+    background: var(--bg-2);
+    transition: border-color .25s, transform .25s;
+    display: flex; flex-direction: column;
+  }
+  .adv-card:hover { border-color: var(--line); transform: translateY(-2px); }
+  .adv-photo {
+    aspect-ratio: 5/4;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-3);
+  }
+  .adv-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .adv-photo.left img { object-position: 25% 25%; transform: scale(1.6); transform-origin: 28% 30%; }
+  .adv-photo.right img { object-position: 70% 18%; transform: scale(1.55); transform-origin: 72% 25%; }
+  .adv-photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,19,48,0) 60%, rgba(10,19,48,0.4) 100%);
+  }
+  .adv-info {
+    padding: 28px 32px 32px;
+  }
+  .adv-info .role {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .adv-info h3 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 28px; line-height: 1.1; margin: 12px 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .adv-info .oab {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em;
+    color: var(--ink-3); margin-bottom: 16px;
+  }
+  .adv-info .bio { color: var(--ink-2); font-size: 14.5px; line-height: 1.6; }
+  .adv-info .specs {
+    margin-top: 18px; padding-top: 18px;
+    border-top: 1px solid var(--line-soft);
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .adv-info .spec {
+    border: 1px solid var(--line-soft);
+    padding: 6px 12px;
+    font-size: 12px; color: var(--ink-2);
+    border-radius: 999px;
+  }
+  .adv-info .phone {
+    margin-top: 18px;
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--whats); font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em;
+  }
+  .adv-info .phone:hover { color: var(--whats-2); }
+
+  /* ───── Reviews ───── */
+  .reviews-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
+  .reviews-head h2 {
+    font-family: var(--serif);font-weight:500;font-size:clamp(30px,3.8vw,52px);
+    line-height:1.05;letter-spacing:-0.02em;margin:12px 0 0;
+  }
+  .reviews-head h2 em { font-style:italic;color:var(--gold);font-weight:400; }
+  .reviews-rating {
+    display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
+  }
+  .stars { display: flex; gap: 4px; color: var(--gold); font-size: 22px; }
+  .reviews-rating .meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; }
+  .reviews-rating .big { font-family: var(--serif);font-size:32px;color:var(--ink); }
+  .reviews-rating .big span { color:var(--ink-3);font-size:18px; }
+
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  @media (max-width: 1100px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px) { .reviews-grid { grid-template-columns: 1fr; } }
+  .review {
+    border: 1px solid var(--line-soft);
+    padding: 26px;
+    display: flex; flex-direction: column; gap: 16px;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255,255,255,0.012), transparent);
+  }
+  .review .stars-row { display: flex; gap: 3px; color: var(--gold); font-size: 14px; }
+  .review p {
+    font-family: var(--serif); font-size: 17px; line-height: 1.5; margin: 0;
+    color: var(--ink); font-weight: 400;
+  }
+  .review-meta { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line-soft); }
+  .review-avatar {
+    width: 36px; height: 36px; border-radius: 999px;
+    background: var(--bg-3); border: 1px solid var(--line);
+    display: grid; place-items: center;
+    font-family: var(--serif); color: var(--gold); font-size: 16px;
+  }
+  .review-name { font-size: 13px; color: var(--ink-2); }
+  .review-date { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); letter-spacing: 0.14em; }
+  .review-google {
+    position: absolute; top: 22px; right: 22px;
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.18em; color: var(--ink-3);
+    text-transform: uppercase;
+    display: inline-flex; gap: 6px; align-items: center;
+  }
+  .review-google::before {
+    content: "G"; font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 14px; line-height: 1;
+  }
+
+  /* ───── Localização ───── */
+  .loc-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  @media (max-width: 720px) { .loc-grid { grid-template-columns: 1fr; } }
+  .loc-card {
+    border: 1px solid var(--line-soft);
+    padding: 32px;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: border-color .25s;
+  }
+  .loc-card:hover { border-color: var(--line); }
+  .loc-card .tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; }
+  .loc-card h3 { font-family: var(--serif); font-size: 26px; margin: 0; }
+  .loc-card .addr { color: var(--ink-2); font-size: 15px; line-height: 1.55; }
+  .loc-card .city { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; color: var(--ink-3); text-transform: uppercase; padding-top: 14px; border-top: 1px solid var(--line-soft); margin-top: auto; }
+
+  /* ───── CTA Final + Form ───── */
+  .cta-final {
+    background:
+      radial-gradient(ellipse 60% 80% at 50% 0%, rgba(201,168,106,0.16), transparent 60%),
+      var(--bg-2);
+    padding: 110px 0;
+    border-top: 1px solid var(--line-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-final::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 75%);
+    opacity: .35;
+  }
+  .cta-grid {
+    position: relative;
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center;
+  }
+  @media (max-width: 920px) { .cta-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  .cta-final h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.0; letter-spacing: -0.02em;
+    margin: 22px 0 20px;
+  }
+  .cta-final h2 em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .cta-final p { color: var(--ink-2); font-size: 17px; max-width: 540px; margin: 0 0 28px; }
+
+  /* form */
+  .form-card {
+    background: rgba(6, 11, 34, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--line);
+    padding: 32px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  }
+  .form-card h3 {
+    font-family: var(--serif); font-size: 24px; margin: 0 0 6px; font-weight: 500;
+  }
+  .form-card .form-sub {
+    font-size: 13px; color: var(--ink-3); margin-bottom: 22px;
+  }
+  .field { margin-bottom: 14px; }
+  .field label {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 6px; display: block;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--line-soft);
+    color: var(--ink);
+    padding: 13px 14px;
+    font-family: var(--sans); font-size: 14.5px;
+    border-radius: 4px;
+    transition: border-color .2s, background .2s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: 0; border-color: var(--gold); background: rgba(201,168,106,0.05);
+  }
+  .field input::placeholder, .field textarea::placeholder { color: var(--ink-3); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+  .form-disclaim {
+    margin-top: 14px;
+    font-size: 11px; color: var(--ink-3); line-height: 1.5;
+    text-align: center;
+  }
+
+  .or-divider {
+    display: flex; align-items: center; gap: 12px;
+    margin: 18px 0;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; color: var(--ink-3);
+    text-transform: uppercase;
+  }
+  .or-divider::before, .or-divider::after {
+    content: ""; flex: 1; height: 1px; background: var(--line-soft);
+  }
+
+  /* ───── Footer ───── */
+  footer {
+    background: #060B22;
+    border-top: 1px solid var(--line-soft);
+    padding: 64px 0 28px;
+    color: var(--ink-3); font-size: 13px;
+  }
+  .foot-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid var(--line-soft); }
+  @media (max-width: 820px) { .foot-top { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .foot-top { grid-template-columns: 1fr; } }
+  .foot-logo { height: 56px; margin-bottom: 18px; }
+  .foot-logo img { height: 100%; width: auto; }
+  .foot-col h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; margin: 0 0 14px; }
+  .foot-col a, .foot-col p { color: var(--ink-2); font-size: 13.5px; line-height: 1.7; margin: 0; }
+  .foot-col a:hover { color: var(--gold); }
+  .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+  .foot-bottom { display: flex; justify-content: space-between; padding-top: 24px; flex-wrap: wrap; gap: 12px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; }
+
+  /* ───── Floating WhatsApp ───── */
+  .float-cta {
+    position: fixed; bottom: 24px; right: 24px;
+    z-index: 60;
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 22px 14px 16px;
+    background: var(--whats); color: #06210F;
+    box-shadow: 0 18px 40px rgba(37,211,102,0.35), 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 999px;
+    font-weight: 600; font-size: 14px;
+    transition: transform .2s;
+    animation: pulseRing 2.4s ease-out infinite;
+  }
+  .float-cta:hover { transform: translateY(-2px); }
+  .float-cta .ico {
+    width: 32px; height: 32px; border-radius: 999px; background: rgba(255,255,255,0.18);
+    display: grid; place-items: center;
+  }
+  @keyframes pulseRing {
+    0% { box-shadow: 0 18px 40px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.55); }
+    70% { box-shadow: 0 18px 40px rgba(37,211,102,0.35), 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 18px 40px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0); }
+  }
+  @media (max-width: 540px) {
+    .float-cta .label { display: none; }
+    .float-cta { padding: 14px; }
+  }
+
+  /* ───── Reveal animations ───── */
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .reveal.in { animation: revealUp .7s ease both; }
+  .reveal-stagger.in > * { animation: revealUp .55s ease both; }
+  .reveal-stagger.in > *:nth-child(1) { animation-delay: 0.05s; }
+  .reveal-stagger.in > *:nth-child(2) { animation-delay: 0.10s; }
+  .reveal-stagger.in > *:nth-child(3) { animation-delay: 0.15s; }
+  .reveal-stagger.in > *:nth-child(4) { animation-delay: 0.20s; }
+  .reveal-stagger.in > *:nth-child(5) { animation-delay: 0.25s; }
+  .reveal-stagger.in > *:nth-child(6) { animation-delay: 0.30s; }
+  .reveal-stagger.in > *:nth-child(7) { animation-delay: 0.35s; }
+  .reveal-stagger.in > *:nth-child(8) { animation-delay: 0.40s; }
+
+
+
+  /* tweak toggles */
+  body.no-stripe .stripe { display: none; }
+  body.no-float .float-cta { display: none; }
+
+  /* hero variant: classic */
+  body.hero-classic .hero-inner { grid-template-columns: 1fr; max-width: 920px; margin: 0 auto; text-align: center; }
+  body.hero-classic .hero-card-wrap { display: none; }
+  body.hero-classic .hero-bullets { align-items: center; }
+  body.hero-classic .hero-bullets li { justify-content: center; }
+  body.hero-classic .cta-row { justify-content: center; }
+  body.hero-classic .hero-sub { margin-left: auto; margin-right: auto; }
+
+  /* hero variant: form-first (form in hero, photo below) */
+  body.hero-formfirst .hero-card-wrap .hero-photo-frame,
+  body.hero-formfirst .hero-card-wrap .hero-floating-stat { display: none; }
+  body.hero-formfirst .hero-card-wrap .hero-form-replacement { display: block; }
+  .hero-form-replacement { display: none; }
+
+  ::selection { background: var(--gold); color: var(--bg-2); }
+</style>
+</head>
+<body>
+
+<!-- ───── Top Stripe ───── -->
+<div class="stripe">
+  <div class="stripe-inner">
+    <span><span class="dot"></span> Atendimento agora — análise gratuita em até 24h</span>
+    <span class="stripe-mobile-hide"><a href="tel:+5521964517008">(21) 96451-7008</a> · <a href="tel:+5521964718175">(21) 96471-8175</a></span>
+  </div>
+</div>
+
+<!-- ───── Nav ───── -->
+<nav class="top">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Dias e Bastos">
+      <img src="assets/logo-horizontal.png" alt="Dias & Bastos · Sociedade de Advogados" />
+    </a>
+    <div class="nav-links">
+      <a href="#direitos">Direitos</a>
+      <a href="#autoridade">O escritório</a>
+      <a href="#advogados">Advogados</a>
+      <a href="#reviews">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <a href="https://wa.me/5521964517008" class="nav-cta" id="navWhats" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      <span class="lbl">Falar agora</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ───── HERO ───── -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow reveal">Direito do Trabalho · OAB/RJ desde 2013</span>
+      <h1 class="reveal">
+        Está com <em>problemas</em> com a empresa que <span class="underline">trabalha ou trabalhou</span>?
+      </h1>
+      <p class="hero-sub reveal"><strong>Você pode ter valores a receber</strong> e nem sabe disso. Nossa equipe analisa seu caso de forma gratuita e estratégica.</p>
+      <ul class="hero-bullets reveal-stagger">
+        <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg></span>Análise <strong style="color:var(--ink)">100% gratuita</strong> e sem compromisso</li>
+        <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg></span>Atendimento rápido, humanizado e preciso</li>
+        <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg></span>Você só paga se ganhar a ação</li>
+      </ul>
+      <div class="cta-row reveal">
+        <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista." class="btn btn-whats wa-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span>Falar no WhatsApp</span>
+        </a>
+        <a href="#cta-final" class="btn btn-ghost">
+          Solicitar análise gratuita
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="reveal" style="margin-top:24px;display:flex;align-items:center;gap:14px;color:var(--ink-3);font-size:13px;">
+        <div class="stars" style="font-size:14px;">★★★★★</div>
+        <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;">4,8 no Google · 53 avaliações</span>
+      </div>
+    </div>
+
+    <div class="hero-card-wrap reveal">
+      <div class="hero-photo-frame">
+        <img src="assets/advogados.jpg" alt="Dr. Claudio Marcio Dias e Dr. Alex Diogo de Assis Bastos — Advogados Trabalhistas" />
+        <div class="hero-photo-meta">
+          <span>Equipe · 2026</span>
+          <span>OAB/RJ</span>
+        </div>
+        <div class="hero-photo-bottom">
+          <div class="nm">Dr. Claudio Dias <span style="color:var(--gold);font-style:italic;">&amp;</span> Dr. Alex Bastos</div>
+          <div class="role">Advogados Trabalhistas</div>
+        </div>
+      </div>
+      <div class="hero-floating-stat">
+        <div class="num">5.000+</div>
+        <div class="lbl">Casos resolvidos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-ribbon reveal">
+      <div><span class="num">10+</span><span class="lbl">Anos atuando</span></div>
+      <div><span class="num">5.000+</span><span class="lbl">Casos resolvidos</span></div>
+      <div><span class="num">4,8</span><span class="lbl">No Google · 53 avaliações</span></div>
+      <div><span class="num">100%</span><span class="lbl">Análise gratuita</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ───── DIREITOS ───── -->
+<section class="block" id="direitos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Capítulo I · Seus direitos</span>
+        <h2>Você pode ter direitos como <em>estes</em>.</h2>
+      </div>
+      <p class="reveal">Em mais de 13 anos de atuação, vimos milhares de trabalhadores deixarem de receber o que era seu por simplesmente não saber. Esta é uma lista — não exaustiva — do que pode estar pendente no seu caso.</p>
+    </div>
+    <div class="direitos-grid reveal-stagger">
+      <div class="direito">
+        <span class="num">01</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Reconhecimento de vínculo</div>
+          <div class="direito-desc">Pejotização, autônomo de fachada e contratos que escondem relação de emprego.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">02</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Rescisão indireta</div>
+          <div class="direito-desc">Quando a empresa comete falta grave, é como se ela tivesse demitido você sem justa causa.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">03</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Insalubridade</div>
+          <div class="direito-desc">Adicional para quem trabalha exposto a agentes nocivos à saúde.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">04</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Estabilidade gestante</div>
+          <div class="direito-desc">Garantia desde a confirmação da gravidez até 5 meses após o parto.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">05</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Acidente de trabalho</div>
+          <div class="direito-desc">Estabilidade de 12 meses após retorno e indenizações cabíveis.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">06</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Horas extras</div>
+          <div class="direito-desc">Trabalho além da jornada legal, com adicional de 50% ou 100%.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">07</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">FGTS</div>
+          <div class="direito-desc">Depósitos não realizados, multa de 40% e correção do saldo devido.</div>
+        </div>
+      </div>
+      <div class="direito">
+        <span class="num">08</span>
+        <svg class="arrow-corner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        <div>
+          <div class="direito-title">Verbas rescisórias</div>
+          <div class="direito-desc">Saldo de salário, aviso prévio, férias, 13º proporcional e multas.</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:48px;text-align:center;">
+      <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20tenho%20direito%20a%20receber%20valores%20da%20empresa." class="btn btn-gold wa-link" target="_blank" rel="noopener">
+        Descobrir se tenho direito
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───── URGÊNCIA ───── -->
+<section class="block urgencia">
+  <div class="wrap urgencia-inner">
+    <div class="reveal">
+      <div class="clock">
+        <div class="clock-content">
+          <div class="big">02<span>y</span></div>
+          <div class="lbl">Prazo prescricional</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Capítulo II · Urgência</span>
+      <h2>Você pode estar <em>perdendo</em> dinheiro<br/>a cada mês que passa.</h2>
+      <p>Existe prazo para entrar com ação trabalhista. Após o fim do contrato, você tem <strong style="color:var(--ink)">até 2 anos</strong> para ajuizar — e cobrar verbas dos <strong style="color:var(--ink)">5 anos anteriores</strong>.</p>
+      <p><span class="accent">O maior erro é esperar.</span> Cada mês que passa, um mês de direitos prescreve. A análise é gratuita; o silêncio é o que custa caro.</p>
+      <div class="cta-row" style="margin-top: 28px;">
+        <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20quero%20verificar%20o%20prazo%20do%20meu%20caso%20trabalhista." class="btn btn-whats wa-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          Verificar meu prazo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── AUTORIDADE ───── -->
+<section class="block" id="autoridade">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Capítulo III · O escritório</span>
+        <h2>Por que escolher a <em>Dias &amp; Bastos?</em></h2>
+      </div>
+      <p class="reveal">Desde 2013 atuamos exclusivamente na defesa de quem trabalha. Estrutura formal, postura ética, presença digital e proximidade humana.</p>
+    </div>
+    <div class="auth-grid reveal-stagger">
+      <div class="auth-cell">
+        <div class="num">10<sup>+</sup></div>
+        <div class="title">Anos de atuação</div>
+        <div class="desc">Mais de uma década dedicada exclusivamente ao Direito do Trabalho.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="num">5.000<sup>+</sup></div>
+        <div class="title">Casos resolvidos</div>
+        <div class="desc">Trabalhadores atendidos e direitos efetivamente recuperados.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="num">100<sup>%</sup></div>
+        <div class="title">Atuação nacional</div>
+        <div class="desc">Atendimento online em todos os estados, presencial no RJ.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="num">CNPJ</div>
+        <div class="title">Escritório formal</div>
+        <div class="desc">Receita Federal e OAB ativos. Contratos transparentes e auditáveis.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="num">24/7</div>
+        <div class="title">Monitoramento</div>
+        <div class="desc">Acompanhamento constante do andamento e prazos de cada processo.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="num"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="title">Atendimento humano</div>
+        <div class="desc">Linguagem clara, sem juridiquês. Você entende cada passo do processo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── ADVOGADOS ───── -->
+<section class="block adv-section" id="advogados">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Capítulo IV · Quem somos</span>
+        <h2>Os advogados que vão <em>cuidar</em> do seu caso.</h2>
+      </div>
+      <p class="reveal">Pós-graduados, presentes em audiências, acessíveis no WhatsApp. Você fala diretamente com o advogado responsável — sem intermediário.</p>
+    </div>
+    <div class="adv-grid reveal-stagger">
+      <article class="adv-card">
+        <div class="adv-photo left">
+          <img src="assets/advogados.jpg" alt="Dr. Claudio Marcio Dias" />
+        </div>
+        <div class="adv-info">
+          <div class="role">Sócio Fundador</div>
+          <h3>Claudio Marcio Dias</h3>
+          <div class="oab">OAB/RJ 228.950</div>
+          <p class="bio">Pós-graduado em Direito e Processo do Trabalho e Direito Previdenciário. Especialista em ações trabalhistas com atendimento humanizado, foco em estratégias de execução e recuperação efetiva de valores.</p>
+          <div class="specs">
+            <span class="spec">Ações Trabalhistas</span>
+            <span class="spec">Execução</span>
+            <span class="spec">Atendimento humanizado</span>
+          </div>
+          <a href="https://wa.me/5521964718175" class="phone wa-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            (21) 96471-8175
+          </a>
+        </div>
+      </article>
+      <article class="adv-card">
+        <div class="adv-photo right">
+          <img src="assets/advogados.jpg" alt="Dr. Alex Diogo de Assis Bastos" />
+        </div>
+        <div class="adv-info">
+          <div class="role">Sócio Fundador</div>
+          <h3>Alex Diogo de Assis Bastos</h3>
+          <div class="oab">OAB/RJ 178.988</div>
+          <p class="bio">Pós-graduado em Direito e Processo do Trabalho e Direito Previdenciário. Atua desde 2013 na defesa dos direitos do trabalhador, com sólida experiência em audiências, acordos e teses estratégicas.</p>
+          <div class="specs">
+            <span class="spec">Direito do Trabalho</span>
+            <span class="spec">Previdenciário</span>
+            <span class="spec">Audiências</span>
+          </div>
+          <a href="https://wa.me/5521964517008" class="phone wa-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            (21) 96451-7008
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───── REVIEWS ───── -->
+<section class="block" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head">
+      <div class="reveal">
+        <span class="eyebrow">Capítulo V · Prova social</span>
+        <h2>O que dizem <em>nossos clientes</em>.</h2>
+      </div>
+      <div class="reviews-rating reveal">
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="big">4,8 <span>/ 5</span></div>
+        <div class="meta">53 avaliações no Google</div>
+      </div>
+    </div>
+    <div class="reviews-grid reveal-stagger">
+      <div class="review">
+        <div class="review-google">Google</div>
+        <div class="stars-row">★★★★★</div>
+        <p>“Só tenho a agradecer ao escritório e a esses profissionais incríveis que se dedicaram para resolucionar o meu caso. De início fiquei apreensiva com tantos golpes que tem atualmente, mais graças a Deus e a honestidade deles deu tudo certo.”</p>
+        <div class="review-meta">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mayara Santos</div>
+            <div class="review-date">Há 1 mês</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-google">Google</div>
+        <div class="stars-row">★★★★★</div>
+        <p>“Excelente equipe de advogados! São ótimos profissionais, trabalham com excelência e demonstram muita dedicação em cada detalhe. Sempre atenciosos, prestativos e comprometidos. Passam confiança e realmente buscam resolver qualquer problema com eficiência.”</p>
+        <div class="review-meta">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Susana Chaves</div>
+            <div class="review-date">Há 2 meses</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-google">Google</div>
+        <div class="stars-row">★★★★★</div>
+        <p>“Minha experiência com o escritório foi excelente. Fui muito bem atendido desde o primeiro contato. A equipe demonstrou profissionalismo, clareza nas orientações e atenção em todas as etapas do processo.”</p>
+        <div class="review-meta">
+          <div class="review-avatar">C</div>
+          <div>
+            <div class="review-name">Caique Barros</div>
+            <div class="review-date">Há 1 mês</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-google">Google</div>
+        <div class="stars-row">★★★★★</div>
+        <p>“Quero deixar registrado meu agradecimento pelo profissionalismo, atenção e dedicação durante todo o andamento do meu processo. Desde o início, tive segurança e clareza em cada etapa, sempre com orientação responsável.”</p>
+        <div class="review-meta">
+          <div class="review-avatar">K</div>
+          <div>
+            <div class="review-name">Karen Cristina G. L. Cota</div>
+            <div class="review-date">Há 3 meses · Local Guide</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-google">Google</div>
+        <div class="stars-row">★★★★★</div>
+        <p>“Super recomendo. Peguei o contato pelo Instagram, fizeram tudo certinho, ganhamos o processo. Eles me informaram tudo e me passaram o valor correto. São totalmente de confiança e sempre respondem quando mandamos msg pelo WhatsApp. Eu indico!”</p>
+        <div class="review-meta">
+          <div class="review-avatar">G</div>
+          <div>
+            <div class="review-name">Gabriela Duarte</div>
+            <div class="review-date">Há 3 meses</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-google">Google</div>
+        <div class="stars-row">★★★★★</div>
+        <p>“Gostaria de parabenizar toda a equipe do escritório Dias &amp; Bastos. Desde a recepção até os advogados, a dedicação, o compromisso e o respeito ao cliente são evidentes. Excelente atendimento jurídico! Super recomendo!!!”</p>
+        <div class="review-meta">
+          <div class="review-avatar">C</div>
+          <div>
+            <div class="review-name">Camila Verneque Alves</div>
+            <div class="review-date">Há 2 meses</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── LOCALIZAÇÃO ───── -->
+<section class="block" id="localizacao">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Capítulo VI · Onde estamos</span>
+        <h2>Atendimento <em>presencial</em> no RJ<br/>e online em todo o Brasil.</h2>
+      </div>
+      <p class="reveal">Duas unidades físicas na Baixada Fluminense, com atendimento online por WhatsApp e videoconferência para clientes em qualquer estado.</p>
+    </div>
+    <div class="loc-grid reveal-stagger">
+      <div class="loc-card">
+        <span class="tag">Matriz</span>
+        <h3>Nova Iguaçu — RJ</h3>
+        <p class="addr">Rua Quintino Bocaiúva, 25 — sala 1003<br/>Centro · CEP 26.210-150</p>
+        <span class="city">Baixada Fluminense · RJ</span>
+      </div>
+      <div class="loc-card">
+        <span class="tag">Filial</span>
+        <h3>Nilópolis — RJ</h3>
+        <p class="addr">Rua Mário de Araújo, 564<br/>Centro · CEP 26.525-132</p>
+        <span class="city">Baixada Fluminense · RJ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CTA Final + Form ───── -->
+<section class="cta-final" id="cta-final">
+  <div class="wrap cta-grid">
+    <div>
+      <span class="eyebrow reveal">Capítulo VII · Próximo passo</span>
+      <h2 class="reveal">Fale agora com um <em>advogado</em> e receba sua análise gratuita.</h2>
+      <p class="reveal">Sem compromisso. Sem custo. Em até 24 horas, você sabe exatamente o que pode receber e como agir. <strong style="color:var(--ink)">Você só paga se ganhar.</strong></p>
+      <div class="cta-row reveal">
+        <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso." class="btn btn-whats wa-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          Falar agora no WhatsApp
+        </a>
+      </div>
+      <div class="reveal" style="margin-top:32px;display:flex;gap:24px;flex-wrap:wrap;color:var(--ink-3);font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;">
+        <span>✓ Resposta em 24h</span>
+        <span>✓ Sigilo profissional</span>
+        <span>✓ Só paga se ganhar</span>
+      </div>
+    </div>
+
+    <form class="form-card reveal" id="leadForm" onsubmit="return submitLead(event)">
+      <h3>Solicitar análise gratuita</h3>
+      <div class="form-sub">Receba uma resposta de um advogado em até 24h. Sem compromisso.</div>
+
+      <div class="field">
+        <label for="ln">Nome completo</label>
+        <input id="ln" name="nome" type="text" required placeholder="Seu nome" />
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="lw">WhatsApp</label>
+          <input id="lw" name="whats" type="tel" required placeholder="(00) 00000-0000" />
+        </div>
+        <div class="field">
+          <label for="lc">Cidade / UF</label>
+          <input id="lc" name="cidade" type="text" placeholder="Ex.: Nova Iguaçu/RJ" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="lt">Tipo de caso</label>
+        <select id="lt" name="tipo">
+          <option>Não tenho certeza</option>
+          <option>Reconhecimento de vínculo</option>
+          <option>Rescisão indireta</option>
+          <option>Insalubridade</option>
+          <option>Estabilidade gestante</option>
+          <option>Acidente de trabalho</option>
+          <option>Horas extras</option>
+          <option>FGTS</option>
+          <option>Verbas rescisórias</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lm">Conte resumidamente seu caso</label>
+        <textarea id="lm" name="msg" rows="3" placeholder="Ex.: trabalhei 4 anos sem registro..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold btn-block">
+        Solicitar análise gratuita
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+
+      <div class="or-divider">ou</div>
+
+      <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso." class="btn btn-whats btn-block wa-link" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Prefiro falar no WhatsApp
+      </a>
+      <div class="form-disclaim">Ao enviar, você concorda em ser contatado pela Dias &amp; Bastos.<br/>Seus dados são confidenciais e protegidos pelo sigilo profissional.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ───── Footer ───── -->
+<footer id="contato">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="foot-logo"><img src="assets/logo-horizontal.png" alt="Dias & Bastos · Sociedade de Advogados" /></div>
+        <p>Escritório especializado em Direito do Trabalho. Atuação humanizada e estratégica desde 2013.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li><a href="#direitos">Direito do Trabalho</a></li>
+          <li><a href="#direitos">Previdenciário</a></li>
+          <li><a href="#direitos">Acidente de Trabalho</a></li>
+          <li><a href="#direitos">Rescisão Indireta</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Unidades</h4>
+        <ul>
+          <li>Nova Iguaçu — RJ</li>
+          <li>Nilópolis — RJ</li>
+          <li>Atendimento online · BR</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5521964517008" target="_blank" rel="noopener">Alex · (21) 96451-7008</a></li>
+          <li><a href="https://wa.me/5521964718175" target="_blank" rel="noopener">Claudio · (21) 96471-8175</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#56323f37253334372522392537322039313732392537252539353f3732392516313b373f3a7835393b">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Dias &amp; Bastos Sociedade de Advogados</span>
+      <span>OAB/RJ 006.907/2022 · CNPJ 52.900.240/0001-46</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ───── Floating WhatsApp ───── -->
+<a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita." class="float-cta wa-link" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+  <span class="ico">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  </span>
+  <span class="label">Análise gratuita</span>
+</a>
+
+<!-- ───── Scripts ───── -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Reveal observer
+  document.documentElement.classList.add('js');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) {
+      // Above-the-fold: reveal immediately on next frame
+      requestAnimationFrame(() => el.classList.add('in'));
+    } else {
+      io.observe(el);
+    }
+  });
+
+  // Lead form → opens WhatsApp with pre-filled message (works without backend, ideal for ads landing)
+  function submitLead(e) {
+    e.preventDefault();
+    const f = e.target;
+    const nome = f.nome.value.trim();
+    const whats = f.whats.value.trim();
+    const cidade = f.cidade.value.trim();
+    const tipo = f.tipo.value;
+    const msg = f.msg.value.trim();
+    const txt =
+`Olá! Gostaria de solicitar uma análise gratuita.
+
+Nome: ${nome}
+WhatsApp: ${whats}
+Cidade: ${cidade}
+Tipo de caso: ${tipo}
+
+${msg}`;
+    const number = (window.__whats || '5521964517008');
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(txt)}`, '_blank');
+    return false;
+  }
+
+  // Update all WhatsApp links when number is tweaked
+  window.__updateWhats = function(num) {
+    window.__whats = num;
+    document.querySelectorAll('.wa-link').forEach(a => {
+      const url = new URL(a.href);
+      const text = url.searchParams.get('text') || '';
+      a.href = `https://wa.me/${num}` + (text ? `?text=${encodeURIComponent(text)}` : '');
+    });
+  };
+</script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+  const tweakRoot = document.createElement('div');
+  document.body.appendChild(tweakRoot);
+
+  function App() {
+    const [t, setT] = useTweaks(window.TWEAKS_DEFAULTS || {});
+
+    React.useEffect(() => {
+      document.documentElement.style.setProperty('--gold', t.accent);
+      document.documentElement.style.setProperty('--bg', t.background);
+      document.body.classList.toggle('hero-classic', t.heroVariant === 'classic');
+      document.body.classList.toggle('no-stripe', !t.showStripe);
+      document.body.classList.toggle('no-float', !t.showFloatingCta);
+      if (t.whatsappNumber && window.__updateWhats) {
+        window.__updateWhats(t.whatsappNumber.replace(/\D/g, ''));
+      }
+    }, [t]);
+
+    return (
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Marca">
+          <TweakColor label="Dourado (accent)" value={t.accent} onChange={v => setT('accent', v)} />
+          <TweakColor label="Azul (background)" value={t.background} onChange={v => setT('background', v)} />
+        </TweakSection>
+        <TweakSection title="Hero">
+          <TweakRadio
+            value={t.heroVariant}
+            onChange={v => setT('heroVariant', v)}
+            options={[
+              { value: 'split',    label: 'Foto' },
+              { value: 'classic',  label: 'Centralizado' },
+            ]}
+          />
+        </TweakSection>
+        <TweakSection title="Conversão">
+          <TweakText label="Número WhatsApp (com DDI)" value={t.whatsappNumber} onChange={v => setT('whatsappNumber', v)} />
+          <TweakToggle label="Faixa superior" value={t.showStripe} onChange={v => setT('showStripe', v)} />
+          <TweakToggle label="Botão flutuante WhatsApp" value={t.showFloatingCta} onChange={v => setT('showFloatingCta', v)} />
+        </TweakSection>
+      </TweaksPanel>
+    );
+  }
+
+  ReactDOM.createRoot(tweakRoot).render(<App />);
+</script>
+
+</body>
+</html>
