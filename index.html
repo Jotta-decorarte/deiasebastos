@@ -2,9 +2,84 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0A1330" />
 <title>Dias & Bastos — Advogados Trabalhistas | Análise Gratuita</title>
 <meta name="description" content="Está com problemas com a empresa? Análise 100% gratuita. Você só paga se ganhar. +5.000 casos resolvidos. Atendimento humanizado em todo o Brasil." />
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SEGURANÇA — Headers (CSP, X-Frame, etc.) devem ser configurados
+     no SERVIDOR/HOSPEDAGEM. Veja SEGURANCA.md para o checklist completo.
+     Estas meta tags são apenas fallback; não substituem headers HTTP reais.
+═══════════════════════════════════════════════════════════════════ -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+<meta name="robots" content="index,follow" />
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     TAGS & PIXELS — Injetados dinamicamente a partir do painel admin.
+     Configure em /admin.html (aba "Tags & Pixels").
+═══════════════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  try {
+    var cfg = JSON.parse(localStorage.getItem('db_admin_config') || '{}');
+    var tags = cfg.tags || {};
+
+    // Google Tag Manager
+    if (tags.gtm && /^GTM-[A-Z0-9]+$/i.test(tags.gtm)) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',tags.gtm);
+    }
+
+    // Google Analytics 4
+    if (tags.ga4 && /^G-[A-Z0-9]+$/i.test(tags.ga4)) {
+      var s=document.createElement('script');
+      s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+tags.ga4;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag=gtag; gtag('js',new Date()); gtag('config',tags.ga4);
+    }
+
+    // Facebook Pixel
+    if (tags.fbPixel && /^[0-9]{10,20}$/.test(tags.fbPixel)) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', tags.fbPixel); fbq('track', 'PageView');
+    }
+
+    // Google Ads conversion
+    if (tags.googleAds && /^AW-[0-9]+$/i.test(tags.googleAds)) {
+      var s2=document.createElement('script');
+      s2.async=true; s2.src='https://www.googletagmanager.com/gtag/js?id='+tags.googleAds;
+      document.head.appendChild(s2);
+      window.dataLayer=window.dataLayer||[];
+      window.gtag=window.gtag||function(){dataLayer.push(arguments);};
+      gtag('js',new Date()); gtag('config',tags.googleAds);
+    }
+
+    // TikTok Pixel
+    if (tags.tiktok && /^[A-Z0-9]{10,30}$/i.test(tags.tiktok)) {
+      !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
+      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+      ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},
+      ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
+      var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;
+      var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      ttq.load(tags.tiktok); ttq.page();}(window, document, 'ttq');
+    }
+  } catch(err) { /* silently fail — never break the site */ }
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -16,7 +91,7 @@
     "heroVariant": "split",
     "showStripe": true,
     "showFloatingCta": true,
-    "whatsappNumber": "5521964517008"
+    "whatsappNumber": "5521975330600"
   }/*EDITMODE-END*/;
 </script>
 
@@ -139,7 +214,19 @@
       radial-gradient(ellipse 60% 50% at 10% 90%, rgba(201,168,106,0.06), transparent 70%),
       linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   }
-  .hero-bg { display: none; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('assets/escritorio.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.20;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,19,48,0.55) 0%, rgba(10,19,48,0.85) 70%, var(--bg-2) 100%);
+  }
   .hero-grid-bg {
     position: absolute; inset: 0;
     background-image:
@@ -421,6 +508,43 @@
   }
   .urgencia .accent { color: var(--gold); font-style: italic; font-family: var(--serif); }
 
+  .urgencia-img {
+    position: relative;
+    aspect-ratio: 4/5;
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  }
+  .urgencia-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(0.15) brightness(0.85) contrast(1.05);
+  }
+  .urgencia-img::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(10,19,48,0.05) 0%, rgba(10,19,48,0.35) 60%, rgba(10,19,48,0.85) 100%),
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(201,168,106,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .urgencia-img-tag {
+    position: absolute; left: 22px; right: 22px; bottom: 22px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    z-index: 2;
+    padding-top: 16px;
+    border-top: 1px solid rgba(201,168,106,0.4);
+  }
+  .urgencia-img-tag .tag-lbl {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em;
+    color: var(--ink-2); text-transform: uppercase;
+  }
+  .urgencia-img-tag .tag-val {
+    font-family: var(--serif); font-weight: 500; font-size: 38px;
+    color: var(--gold); line-height: 1; letter-spacing: -0.02em;
+  }
+
   /* ───── Autoridade ───── */
   .auth-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
@@ -479,8 +603,8 @@
   .adv-photo img {
     width: 100%; height: 100%; object-fit: cover;
   }
-  .adv-photo.left img { object-position: 25% 25%; transform: scale(1.6); transform-origin: 28% 30%; }
-  .adv-photo.right img { object-position: 70% 18%; transform: scale(1.55); transform-origin: 72% 25%; }
+  .adv-photo.left img { object-fit: cover; object-position: center 20%; }
+  .adv-photo.right img { object-fit: cover; object-position: center 18%; }
   .adv-photo::after {
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(10,19,48,0) 60%, rgba(10,19,48,0.4) 100%);
@@ -756,6 +880,180 @@
   .hero-form-replacement { display: none; }
 
   ::selection { background: var(--gold); color: var(--bg-2); }
+
+  /* ═══════════════════════════════════════════════════════════════
+     MOBILE — Ajustes responsivos completos (≤768px)
+  ═══════════════════════════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    body { font-size: 16px; padding-bottom: 76px; /* espaço pra bottom bar */ }
+
+    /* Stripe: simplifica e diminui */
+    .stripe { font-size: 11.5px; }
+    .stripe-inner { padding: 8px 18px; gap: 12px; }
+
+    /* Nav: logo menor + hamburguer */
+    .nav-inner { padding: 12px 18px; gap: 12px; }
+    .nav-logo { height: 38px; }
+    .nav-cta { padding: 10px 14px; font-size: 12px; }
+    .nav-hamb { display: inline-flex !important; }
+
+    /* Hero: padding reduzido, foto menor, ribbon 2x2 */
+    .hero { padding: 32px 0 56px; }
+    .hero-inner { gap: 32px; }
+    .hero h1 { font-size: 30px !important; line-height: 1.1; margin: 16px 0 18px; letter-spacing: -0.015em; }
+    .hero h1 em { font-size: 32px !important; }
+    .hero h1 .underline { font-size: inherit !important; }
+    .hero-sub { font-size: 16px; margin-bottom: 22px; }
+    .hero-bullets li { font-size: 14.5px; }
+    .cta-row { flex-direction: column; gap: 10px; }
+    .cta-row .btn { width: 100%; justify-content: center; padding: 15px 18px; font-size: 14.5px; }
+
+    .hero-card-wrap { order: -1; margin-top: 8px; }
+    .hero-photo-frame { aspect-ratio: 4/3; max-height: 320px; }
+    .hero-photo-frame::before { inset: 8px; }
+    .hero-photo-meta { left: 18px; right: 18px; top: 18px; font-size: 10px; letter-spacing: 0.14em; }
+    .hero-photo-bottom { left: 18px; right: 18px; bottom: 16px; }
+    .hero-photo-bottom .nm { font-size: 18px; }
+    .hero-floating-stat { right: 12px; top: 12px; padding: 12px 14px; }
+    .hero-floating-stat .num { font-size: 26px; }
+    .hero-floating-stat .lbl { font-size: 9px; letter-spacing: 0.14em; }
+
+    .hero-ribbon { margin-top: 36px; padding: 18px 0; gap: 18px 14px; }
+    .hero-ribbon .num { font-size: 24px; }
+    .hero-ribbon .lbl { font-size: 9.5px; letter-spacing: 0.14em; }
+
+    /* Sections: padding reduzido */
+    section.block { padding: 64px 0; }
+    .sec-head { margin-bottom: 32px; gap: 16px; }
+    .sec-head h2 { font-size: 28px !important; line-height: 1.1; }
+    .sec-head p { font-size: 14.5px; }
+    .eyebrow { font-size: 10px; letter-spacing: 0.18em; gap: 8px; }
+    .eyebrow::before { width: 18px; }
+
+    /* Direitos: padding menor */
+    .direito { padding: 22px 20px 24px; min-height: 160px; }
+    .direito-title { font-size: 19px; margin-top: 32px; }
+    .direito-desc { font-size: 12.5px; }
+
+    /* Urgência: imagem responsiva */
+    .urgencia-inner { gap: 32px; }
+    .urgencia-img { max-width: 320px; aspect-ratio: 4/5; }
+    .urgencia-img-tag { left: 16px; right: 16px; bottom: 16px; padding-top: 12px; }
+    .urgencia-img-tag .tag-val { font-size: 28px; }
+    .urgencia-img-tag .tag-lbl { font-size: 9.5px; }
+    .urgencia h2 { font-size: 28px !important; line-height: 1.1; }
+    .urgencia p { font-size: 15px; }
+
+    /* Autoridade */
+    .auth-cell { padding: 24px 22px; min-height: 160px; }
+    .auth-cell .num { font-size: 38px; }
+    .auth-cell .title { font-size: 17px; }
+    .auth-cell .desc { font-size: 12.5px; }
+
+    /* Advogados */
+    .adv-photo { aspect-ratio: 4/3; }
+    .adv-info { padding: 22px 22px 24px; }
+    .adv-info h3 { font-size: 22px; }
+    .adv-info .bio { font-size: 13.5px; }
+
+    /* Reviews */
+    .reviews-head { margin-bottom: 28px; gap: 14px; }
+    .reviews-head h2 { font-size: 28px !important; }
+    .reviews-rating { align-items: flex-start; }
+    .reviews-rating .big { font-size: 24px; }
+    .review { padding: 20px; }
+    .review p { font-size: 15px; }
+
+    /* Localização */
+    .loc-card { padding: 22px; }
+    .loc-card h3 { font-size: 21px; }
+
+    /* CTA Final */
+    .cta-final { padding: 64px 0; }
+    .cta-final h2 { font-size: 32px !important; line-height: 1.05; }
+    .cta-final p { font-size: 15px; }
+    .form-card { padding: 22px; }
+    .form-card h3 { font-size: 20px; }
+    .field input, .field select, .field textarea { padding: 14px 14px; font-size: 16px; /* 16px = no iOS zoom */ }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+
+    /* Footer */
+    footer { padding: 44px 0 100px; }
+    .foot-top { gap: 28px; padding-bottom: 28px; }
+    .foot-bottom { font-size: 9.5px; gap: 8px; }
+
+    /* Floating CTA: esconder, vamos usar bottom bar */
+    .float-cta { display: none !important; }
+  }
+
+  /* Hamburguer button (hidden on desktop) */
+  .nav-hamb {
+    display: none;
+    width: 40px; height: 40px;
+    align-items: center; justify-content: center;
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.04);
+    color: var(--ink);
+  }
+  .nav-hamb svg { display: block; }
+
+  /* Mobile menu overlay */
+  .mob-menu {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  .mob-menu.open { display: flex; animation: revealUp .3s ease; }
+  .mob-menu-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+  .mob-menu-close {
+    width: 40px; height: 40px;
+    display: grid; place-items: center;
+    border: 1px solid var(--line-soft); border-radius: 6px;
+    color: var(--ink);
+  }
+  .mob-menu-logo { height: 38px; }
+  .mob-menu-logo img { height: 100%; width: auto; }
+  .mob-menu nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .mob-menu nav a {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 4px;
+    border-bottom: 1px solid var(--line-soft);
+    font-family: var(--serif); font-size: 22px; color: var(--ink);
+  }
+  .mob-menu nav a::after { content: "→"; color: var(--gold); font-family: var(--sans); }
+  .mob-menu-cta {
+    margin-top: 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  /* Bottom mobile action bar (WhatsApp + Ligar) */
+  .bottom-bar {
+    display: none;
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: rgba(6, 11, 34, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line-soft);
+    z-index: 80;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+  @media (max-width: 768px) { .bottom-bar { display: flex; } }
+  .bottom-bar a {
+    flex: 1;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 12px;
+    font-size: 14px; font-weight: 600;
+    border-radius: 6px;
+    min-height: 48px;
+  }
+  .bb-whats { background: var(--whats); color: #06210F; box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+  .bb-call { background: rgba(201,168,106,0.12); color: var(--gold); border: 1px solid var(--line); }
+  body.no-float .bottom-bar { display: none; }
 </style>
 </head>
 <body>
@@ -764,7 +1062,7 @@
 <div class="stripe">
   <div class="stripe-inner">
     <span><span class="dot"></span> Atendimento agora — análise gratuita em até 24h</span>
-    <span class="stripe-mobile-hide"><a href="tel:+5521964517008">(21) 96451-7008</a> · <a href="tel:+5521964718175">(21) 96471-8175</a></span>
+    <span class="stripe-mobile-hide"><a href="tel:+5521975330600">(21) 97533-0600</a></span>
   </div>
 </div>
 
@@ -772,7 +1070,7 @@
 <nav class="top">
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="Dias e Bastos">
-      <img src="assets/logo-horizontal.png" alt="Dias & Bastos · Sociedade de Advogados" />
+      <img src="assets/logo-horizontal.png" alt="Dias & Bastos · Sociedade de Advogados" style="width: 80px; height: 80px" />
     </a>
     <div class="nav-links">
       <a href="#direitos">Direitos</a>
@@ -781,12 +1079,54 @@
       <a href="#reviews">Avaliações</a>
       <a href="#contato">Contato</a>
     </div>
-    <a href="https://wa.me/5521964517008" class="nav-cta" id="navWhats" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-      <span class="lbl">Falar agora</span>
-    </a>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a href="https://wa.me/5521975330600" class="nav-cta wa-link" id="navWhats" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        <span class="lbl">Falar agora</span>
+      </a>
+      <button class="nav-hamb" id="navHamb" aria-label="Abrir menu" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </div>
 </nav>
+
+<!-- Mobile menu overlay -->
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mob-menu-top">
+    <div class="mob-menu-logo"><img src="assets/logo-horizontal.png" alt="Dias & Bastos" /></div>
+    <button class="mob-menu-close" id="mobMenuClose" aria-label="Fechar menu" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#direitos">Seus direitos</a>
+    <a href="#autoridade">O escritório</a>
+    <a href="#advogados">Advogados</a>
+    <a href="#reviews">Avaliações</a>
+    <a href="#localizacao">Onde estamos</a>
+    <a href="#cta-final">Análise gratuita</a>
+  </nav>
+  <div class="mob-menu-cta">
+    <a href="https://wa.me/5521975330600" class="btn btn-whats btn-block wa-link" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <a href="tel:+5521975330600" class="btn btn-ghost btn-block">Ligar agora</a>
+  </div>
+</div>
+
+<!-- Mobile bottom bar (WhatsApp + Ligar) -->
+<div class="bottom-bar">
+  <a href="tel:+5521975330600" class="bb-call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2z"/></svg>
+    Ligar
+  </a>
+  <a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita." class="bb-whats wa-link" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    WhatsApp · Análise grátis
+  </a>
+</div>
 
 <!-- ───── HERO ───── -->
 <header class="hero">
@@ -795,8 +1135,8 @@
   <div class="wrap hero-inner">
     <div>
       <span class="eyebrow reveal">Direito do Trabalho · OAB/RJ desde 2013</span>
-      <h1 class="reveal">
-        Está com <em>problemas</em> com a empresa que <span class="underline">trabalha ou trabalhou</span>?
+      <h1 class="reveal" style="font-size: 55px">
+        Está com <em style="font-size: 60px">problemas</em> com a empresa que <span class="underline" style="font-size: 50.528px">trabalha ou trabalhou</span>?
       </h1>
       <p class="hero-sub reveal"><strong>Você pode ter valores a receber</strong> e nem sabe disso. Nossa equipe analisa seu caso de forma gratuita e estratégica.</p>
       <ul class="hero-bullets reveal-stagger">
@@ -805,7 +1145,7 @@
         <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg></span>Você só paga se ganhar a ação</li>
       </ul>
       <div class="cta-row reveal">
-        <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista." class="btn btn-whats wa-link" target="_blank" rel="noopener">
+        <a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista." class="btn btn-whats wa-link" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
           <span>Falar no WhatsApp</span>
         </a>
@@ -822,7 +1162,7 @@
 
     <div class="hero-card-wrap reveal">
       <div class="hero-photo-frame">
-        <img src="assets/advogados.jpg" alt="Dr. Claudio Marcio Dias e Dr. Alex Diogo de Assis Bastos — Advogados Trabalhistas" />
+        <img src="assets/marcio.jpg" alt="Dr. Claudio Marcio Dias e Dr. Alex Diogo de Assis Bastos — Advogados Trabalhistas" style="padding: 2px; margin: 0px; border-radius: 0px; border-width: 0px" />
         <div class="hero-photo-meta">
           <span>Equipe · 2026</span>
           <span>OAB/RJ</span>
@@ -832,16 +1172,16 @@
           <div class="role">Advogados Trabalhistas</div>
         </div>
       </div>
-      <div class="hero-floating-stat">
-        <div class="num">5.000+</div>
-        <div class="lbl">Casos resolvidos</div>
+      <div class="hero-floating-stat" style="width: 150px; height: 65px; padding: 2px 2px 2px 1px">
+        <div class="num" style="font-size: 30px">5.000+</div>
+        <div class="lbl" style="font-size: 8px">Casos resolvidos</div>
       </div>
     </div>
   </div>
 
   <div class="wrap">
     <div class="hero-ribbon reveal">
-      <div><span class="num">10+</span><span class="lbl">Anos atuando</span></div>
+      <div><span class="num">13+</span><span class="lbl">Anos atuando</span></div>
       <div><span class="num">5.000+</span><span class="lbl">Casos resolvidos</span></div>
       <div><span class="num">4,8</span><span class="lbl">No Google · 53 avaliações</span></div>
       <div><span class="num">100%</span><span class="lbl">Análise gratuita</span></div>
@@ -926,7 +1266,7 @@
       </div>
     </div>
     <div class="reveal" style="margin-top:48px;text-align:center;">
-      <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20tenho%20direito%20a%20receber%20valores%20da%20empresa." class="btn btn-gold wa-link" target="_blank" rel="noopener">
+      <a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20tenho%20direito%20a%20receber%20valores%20da%20empresa." class="btn btn-gold wa-link" target="_blank" rel="noopener">
         Descobrir se tenho direito
         <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -938,10 +1278,11 @@
 <section class="block urgencia">
   <div class="wrap urgencia-inner">
     <div class="reveal">
-      <div class="clock">
-        <div class="clock-content">
-          <div class="big">02<span>y</span></div>
-          <div class="lbl">Prazo prescricional</div>
+      <div class="urgencia-img">
+        <img src="assets/perder-dinheiro.jpg" alt="Tempo é dinheiro — não deixe seus direitos prescreverem" />
+        <div class="urgencia-img-tag">
+          <span class="tag-lbl">Prazo prescricional</span>
+          <span class="tag-val">2 anos</span>
         </div>
       </div>
     </div>
@@ -951,7 +1292,7 @@
       <p>Existe prazo para entrar com ação trabalhista. Após o fim do contrato, você tem <strong style="color:var(--ink)">até 2 anos</strong> para ajuizar — e cobrar verbas dos <strong style="color:var(--ink)">5 anos anteriores</strong>.</p>
       <p><span class="accent">O maior erro é esperar.</span> Cada mês que passa, um mês de direitos prescreve. A análise é gratuita; o silêncio é o que custa caro.</p>
       <div class="cta-row" style="margin-top: 28px;">
-        <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20quero%20verificar%20o%20prazo%20do%20meu%20caso%20trabalhista." class="btn btn-whats wa-link" target="_blank" rel="noopener">
+        <a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20quero%20verificar%20o%20prazo%20do%20meu%20caso%20trabalhista." class="btn btn-whats wa-link" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
           Verificar meu prazo
         </a>
@@ -972,7 +1313,7 @@
     </div>
     <div class="auth-grid reveal-stagger">
       <div class="auth-cell">
-        <div class="num">10<sup>+</sup></div>
+        <div class="num">13<sup>+</sup></div>
         <div class="title">Anos de atuação</div>
         <div class="desc">Mais de uma década dedicada exclusivamente ao Direito do Trabalho.</div>
       </div>
@@ -1017,8 +1358,8 @@
     </div>
     <div class="adv-grid reveal-stagger">
       <article class="adv-card">
-        <div class="adv-photo left">
-          <img src="assets/advogados.jpg" alt="Dr. Claudio Marcio Dias" />
+        <div class="adv-photo left" style="width: 500px; height: 650px">
+          <img src="assets/marcio.jpg" alt="Dr. Claudio Marcio Dias" />
         </div>
         <div class="adv-info">
           <div class="role">Sócio Fundador</div>
@@ -1030,15 +1371,15 @@
             <span class="spec">Execução</span>
             <span class="spec">Atendimento humanizado</span>
           </div>
-          <a href="https://wa.me/5521964718175" class="phone wa-link" target="_blank" rel="noopener">
+          <a href="https://wa.me/5521975330600" class="phone wa-link" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-            (21) 96471-8175
+            (21) 97533-0600
           </a>
         </div>
       </article>
       <article class="adv-card">
-        <div class="adv-photo right">
-          <img src="assets/advogados.jpg" alt="Dr. Alex Diogo de Assis Bastos" />
+        <div class="adv-photo right" style="height: 650px; width: 503px; margin: 1px; padding: 1px; border-radius: 1px">
+          <img src="assets/alex.jpg" alt="Dr. Alex Diogo de Assis Bastos" />
         </div>
         <div class="adv-info">
           <div class="role">Sócio Fundador</div>
@@ -1047,12 +1388,12 @@
           <p class="bio">Pós-graduado em Direito e Processo do Trabalho e Direito Previdenciário. Atua desde 2013 na defesa dos direitos do trabalhador, com sólida experiência em audiências, acordos e teses estratégicas.</p>
           <div class="specs">
             <span class="spec">Direito do Trabalho</span>
-            <span class="spec">Previdenciário</span>
+            <span class="spec">Previdnciá</span>
             <span class="spec">Audiências</span>
           </div>
-          <a href="https://wa.me/5521964517008" class="phone wa-link" target="_blank" rel="noopener">
+          <a href="https://wa.me/5521975330600" class="phone wa-link" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-            (21) 96451-7008
+            (21) 97533-0600
           </a>
         </div>
       </article>
@@ -1188,7 +1529,7 @@
       <h2 class="reveal">Fale agora com um <em>advogado</em> e receba sua análise gratuita.</h2>
       <p class="reveal">Sem compromisso. Sem custo. Em até 24 horas, você sabe exatamente o que pode receber e como agir. <strong style="color:var(--ink)">Você só paga se ganhar.</strong></p>
       <div class="cta-row reveal">
-        <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso." class="btn btn-whats wa-link" target="_blank" rel="noopener">
+        <a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso." class="btn btn-whats wa-link" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
           Falar agora no WhatsApp
         </a>
@@ -1244,7 +1585,7 @@
 
       <div class="or-divider">ou</div>
 
-      <a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso." class="btn btn-whats btn-block wa-link" target="_blank" rel="noopener">
+      <a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso." class="btn btn-whats btn-block wa-link" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
         Prefiro falar no WhatsApp
       </a>
@@ -1281,9 +1622,9 @@
       <div class="foot-col">
         <h4>Contato</h4>
         <ul>
-          <li><a href="https://wa.me/5521964517008" target="_blank" rel="noopener">Alex · (21) 96451-7008</a></li>
-          <li><a href="https://wa.me/5521964718175" target="_blank" rel="noopener">Claudio · (21) 96471-8175</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#56323f37253334372522392537322039313732392537252539353f3732392516313b373f3a7835393b">E-mail</a></li>
+          <li><a href="https://wa.me/5521975330600" target="_blank" rel="noopener">WhatsApp: (21) 97533-0600</a></li>
+          <li><a href="tel:+5521975330600">Tel: (21) 97533-0600</a></li>
+          <li><a href="mailto:diasebastosadvogadosassociados@gmail.com">E-mail</a></li>
         </ul>
       </div>
     </div>
@@ -1295,7 +1636,7 @@
 </footer>
 
 <!-- ───── Floating WhatsApp ───── -->
-<a href="https://wa.me/5521964517008?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita." class="float-cta wa-link" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+<a href="https://wa.me/5521975330600?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita." class="float-cta wa-link" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
   <span class="ico">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
   </span>
@@ -1303,7 +1644,7 @@
 </a>
 
 <!-- ───── Scripts ───── -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Reveal observer
   document.documentElement.classList.add('js');
   const io = new IntersectionObserver((entries) => {
@@ -1312,22 +1653,38 @@
   document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
     const r = el.getBoundingClientRect();
     if (r.top < window.innerHeight && r.bottom > 0) {
-      // Above-the-fold: reveal immediately on next frame
       requestAnimationFrame(() => el.classList.add('in'));
     } else {
       io.observe(el);
     }
   });
 
-  // Lead form → opens WhatsApp with pre-filled message (works without backend, ideal for ads landing)
+  // ─── Mobile menu ────────────────────────────────────────────
+  const mobMenu = document.getElementById('mobMenu');
+  const mobMenuOpen = document.getElementById('navHamb');
+  const mobMenuClose = document.getElementById('mobMenuClose');
+  function openMenu() { mobMenu.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { mobMenu.classList.remove('open'); document.body.style.overflow = ''; }
+  if (mobMenuOpen) mobMenuOpen.addEventListener('click', openMenu);
+  if (mobMenuClose) mobMenuClose.addEventListener('click', closeMenu);
+  mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // ─── Segurança: sanitização básica anti-XSS ─────────────────
+  function sanitize(str) {
+    return String(str || '').replace(/[<>]/g, '').replace(/javascript:/gi, '').slice(0, 500);
+  }
+
+  // ─── Lead form: honeypot + sanitize + WhatsApp ──────────────
   function submitLead(e) {
     e.preventDefault();
     const f = e.target;
-    const nome = f.nome.value.trim();
-    const whats = f.whats.value.trim();
-    const cidade = f.cidade.value.trim();
-    const tipo = f.tipo.value;
-    const msg = f.msg.value.trim();
+    // Honeypot: bot preenche campo invisível "website"
+    if (f.website && f.website.value) { return false; }
+    const nome = sanitize(f.nome.value.trim());
+    const whats = sanitize(f.whats.value.trim());
+    const cidade = sanitize(f.cidade.value.trim());
+    const tipo = sanitize(f.tipo.value);
+    const msg = sanitize(f.msg.value.trim());
     const txt =
 `Olá! Gostaria de solicitar uma análise gratuita.
 
@@ -1337,20 +1694,51 @@ Cidade: ${cidade}
 Tipo de caso: ${tipo}
 
 ${msg}`;
-    const number = (window.__whats || '5521964517008');
+    const number = (window.__whats || '5521975330600');
+    // Track conversion
+    try {
+      if (window.fbq) fbq('track', 'Lead');
+      if (window.gtag) gtag('event', 'generate_lead', { method: 'form' });
+      if (window.dataLayer) dataLayer.push({ event: 'lead_submit' });
+    } catch(_) {}
     window.open(`https://wa.me/${number}?text=${encodeURIComponent(txt)}`, '_blank');
     return false;
   }
 
-  // Update all WhatsApp links when number is tweaked
+  // Update all WhatsApp links when number changes
   window.__updateWhats = function(num) {
     window.__whats = num;
     document.querySelectorAll('.wa-link').forEach(a => {
-      const url = new URL(a.href);
-      const text = url.searchParams.get('text') || '';
-      a.href = `https://wa.me/${num}` + (text ? `?text=${encodeURIComponent(text)}` : '');
+      try {
+        const url = new URL(a.href);
+        const text = url.searchParams.get('text') || '';
+        a.href = `https://wa.me/${num}` + (text ? `?text=${encodeURIComponent(text)}` : '');
+      } catch(_) {}
     });
   };
+
+  // ─── Aplicar configurações do admin (conteúdo editável) ─────
+  (function applyAdminConfig() {
+    try {
+      const cfg = JSON.parse(localStorage.getItem('db_admin_config') || '{}');
+      const c = cfg.content || {};
+      if (c.whatsapp) window.__updateWhats(String(c.whatsapp).replace(/\D/g, ''));
+      // Telefone barra superior
+      if (c.phone1) document.querySelectorAll('[data-edit="phone1"]').forEach(el => el.textContent = c.phone1);
+      if (c.phone2) document.querySelectorAll('[data-edit="phone2"]').forEach(el => el.textContent = c.phone2);
+      if (c.email)  document.querySelectorAll('[data-edit="email"]').forEach(el => { el.textContent = c.email; if(el.tagName==='A') el.href='mailto:'+c.email; });
+      if (c.heroTitle) {
+        const h = document.querySelector('[data-edit="heroTitle"]');
+        if (h) h.textContent = c.heroTitle;
+      }
+      if (c.heroSub) {
+        const s = document.querySelector('[data-edit="heroSub"]');
+        if (s) s.textContent = c.heroSub;
+      }
+      if (c.address1) document.querySelectorAll('[data-edit="address1"]').forEach(el => el.innerHTML = c.address1.replace(/\n/g,'<br/>'));
+      if (c.address2) document.querySelectorAll('[data-edit="address2"]').forEach(el => el.innerHTML = c.address2.replace(/\n/g,'<br/>'));
+    } catch(err) {}
+  })();
 </script>
 
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
