@@ -21,10 +21,26 @@
      Configure em /admin.html (aba "Tags & Pixels").
 ═══════════════════════════════════════════════════════════════════ -->
 <script>
+/* ═══════════════════════════════════════════════════════════════════
+   🎯 COLE SEUS IDs AQUI — Pixel, Google Ads, GA4, GTM
+   ═══════════════════════════════════════════════════════════════════
+   Basta substituir os "" pelo seu ID e salvar. Deixe vazio "" se não usar.
+   Exemplos abaixo dos formatos corretos.
+═══════════════════════════════════════════════════════════════════ */
+window.DB_TAGS = {
+  fbPixel:   "",   // Facebook/Meta Pixel — ex: "1234567890123456"
+  googleAds: "",   // Google Ads — ex: "AW-123456789"
+  ga4:       "",   // Google Analytics 4 — ex: "G-XXXXXXXXXX"
+  gtm:       "",   // Google Tag Manager — ex: "GTM-XXXXXXX"
+  tiktok:    ""    // TikTok Pixel — opcional
+};
+/* ═══════════════════════════════════════════════════════════════════ */
 (function(){
   try {
-    var cfg = JSON.parse(localStorage.getItem('db_admin_config') || '{}');
-    var tags = cfg.tags || {};
+    var tags = window.DB_TAGS || {};
+    // Também aceita config via /admin.html (localStorage) como fallback
+    var saved = JSON.parse(localStorage.getItem('db_admin_config') || '{}').tags || {};
+    Object.keys(saved).forEach(function(k){ if (!tags[k]) tags[k] = saved[k]; });
 
     // Google Tag Manager
     if (tags.gtm && /^GTM-[A-Z0-9]+$/i.test(tags.gtm)) {
@@ -595,16 +611,14 @@
   }
   .adv-card:hover { border-color: var(--line); transform: translateY(-2px); }
   .adv-photo {
-    aspect-ratio: 5/4;
+    aspect-ratio: 4/5;
     overflow: hidden;
     position: relative;
     background: var(--bg-3);
   }
   .adv-photo img {
-    width: 100%; height: 100%; object-fit: cover;
+    width: 100%; height: 100%; object-fit: cover; object-position: center 22%;
   }
-  .adv-photo.left img { object-fit: cover; object-position: center 20%; }
-  .adv-photo.right img { object-fit: cover; object-position: center 18%; }
   .adv-photo::after {
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(10,19,48,0) 60%, rgba(10,19,48,0.4) 100%);
@@ -1162,8 +1176,7 @@
 
     <div class="hero-card-wrap reveal">
       <div class="hero-photo-frame">
-        <img src="assets/advogados.jpg
-" alt="Dr. Claudio Marcio Dias e Dr. Alex Diogo de Assis Bastos — Advogados Trabalhistas" style="padding: 2px; margin: 0px; border-radius: 0px; border-width: 0px" />
+        <img src="assets/advogados.jpg" alt="Dr. Claudio Marcio Dias e Dr. Alex Diogo de Assis Bastos — Advogados Trabalhistas" style="padding: 2px; margin: 0px; border-radius: 0px; border-width: 0px" />
         <div class="hero-photo-meta">
           <span>Equipe · 2026</span>
           <span>OAB/RJ</span>
@@ -1172,10 +1185,6 @@
           <div class="nm">Dr. Claudio Dias <span style="color:var(--gold);font-style:italic;">&amp;</span> Dr. Alex Bastos</div>
           <div class="role">Advogados Trabalhistas</div>
         </div>
-      </div>
-      <div class="hero-floating-stat" style="width: 150px; height: 65px; padding: 2px 2px 2px 1px">
-        <div class="num" style="font-size: 30px">5.000+</div>
-        <div class="lbl" style="font-size: 8px">Casos resolvidos</div>
       </div>
     </div>
   </div>
@@ -1359,7 +1368,7 @@
     </div>
     <div class="adv-grid reveal-stagger">
       <article class="adv-card">
-        <div class="adv-photo left" style="width: 500px; height: 650px">
+        <div class="adv-photo">
           <img src="assets/marcio.jpg" alt="Dr. Claudio Marcio Dias" />
         </div>
         <div class="adv-info">
@@ -1379,7 +1388,7 @@
         </div>
       </article>
       <article class="adv-card">
-        <div class="adv-photo right" style="height: 650px; width: 503px; margin: 1px; padding: 1px; border-radius: 1px">
+        <div class="adv-photo">
           <img src="assets/alex.jpg" alt="Dr. Alex Diogo de Assis Bastos" />
         </div>
         <div class="adv-info">
@@ -1625,7 +1634,7 @@
         <ul>
           <li><a href="https://wa.me/5521975330600" target="_blank" rel="noopener">WhatsApp: (21) 97533-0600</a></li>
           <li><a href="tel:+5521975330600">Tel: (21) 97533-0600</a></li>
-          <li><a href="mailto:diasebastosadvogadosassociados@gmail.com">E-mail</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#eb8f828a988e898a989f84988a8f9d848c8a8f84988a98988488828a8f8498ab8c868a8287c5888486">E-mail</a></li>
         </ul>
       </div>
     </div>
@@ -1645,7 +1654,7 @@
 </a>
 
 <!-- ───── Scripts ───── -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Reveal observer
   document.documentElement.classList.add('js');
   const io = new IntersectionObserver((entries) => {
